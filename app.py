@@ -9,16 +9,13 @@ def hello_world():
 
 
 repositories = [
-    {'user': 'GeoscienceAustralia', 'repo': 'fc'},
+    {'user': 'GeoscienceAustralia', 'repo': 'fc', 'coveralls': True},
     {'user': 'GeoscienceAustralia', 'repo': 'wofs'},
-    {'user': 'GeoscienceAustralia', 'repo': 'digitalearthau',
-     },
-    {'user': 'GeoscienceAustralia', 'repo': 'dea-orchestration',
-     },
-    {'user': 'opendatacube', 'repo': 'datacube-core',
-     'rtd_name': 'datacube-core', 'codecov': True},
+    {'user': 'GeoscienceAustralia', 'repo': 'digitalearthau', 'codecov': True},
+    {'user': 'GeoscienceAustralia', 'repo': 'dea-orchestration', 'codecov': True},
+    {'user': 'opendatacube', 'repo': 'datacube-core', 'rtd_name': 'datacube-core', 'codecov': True},
     {'user': 'opendatacube', 'repo': 'datacube-ows'},
-    {'user': 'opendatacube', 'repo': 'datacube-stats'},
+    {'user': 'opendatacube', 'repo': 'datacube-stats', 'codecov': True},
     {'user': 'GeoscienceAustralia', 'repo': 'wagl'},
     {'user': 'GeoscienceAustralia', 'repo': 'eo-datasets', 'coveralls': True},
     {'user': 'GeoscienceAustralia', 'repo': 'COG-Conversion'},

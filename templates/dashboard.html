@@ -63,18 +63,32 @@
                             <tbody id="repos-table">
                             {% for repo in repos %}
                             <tr>
-                                <td><a href="https://github.com/{{ repo.user }}/{{ repo.repo }}">{{ repo.repo }}</a></td>
-                                <td><img alt="Travis (.org)" src="https://img.shields.io/travis/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge"></td>
-                                <td>{% if repo.rtd_name %}<img alt="Read the Docs" src="https://img.shields.io/readthedocs/{{ repo.rtd_name }}.svg?style=for-the-badge">{% endif %}</td>
+                                <td>
+                                    <a href="https://github.com/{{ repo.user }}/{{ repo.repo }}">{{ repo.repo }}</a>
+                                </td>
+                                <td>
+                                    <a href="https://travis-ci.org/{{ repo.user }}/{{ repo.repo }}">
+                                        <img alt="Travis (.org)" src="https://img.shields.io/travis/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge&label=">
+                                    </a>
+                                </td>
+                                <td>
+                                    {% if repo.rtd_name %}
+                                        <a href="https://{{ repo.rtd_name }}.readthedocs.io/"><img alt="Read the Docs" src="https://img.shields.io/readthedocs/{{ repo.rtd_name }}.svg?style=for-the-badge&label="></a>
+                                    {% endif %}
+                                </td>
                                 <td>
                                     {%- if repo.codecov -%}
-                                        <img alt="Codecov" src="https://img.shields.io/codecov/c/github/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge">
+                                        <a href="https://codecov.io/gh/{{ repo.user }}/{{ repo.repo }}/">
+                                            <img alt="Codecov" src="https://img.shields.io/codecov/c/github/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge&label=">
+                                        </a>
                                     {%- endif -%}
                                     {%- if repo.coveralls -%}
-                                        <img alt="Coveralls github" src="https://img.shields.io/coveralls/github/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge">
+                                        <a href="https://coveralls.io/github/{{ repo.user }}/{{ repo.repo }}">
+                                            <img alt="Coveralls github" src="https://img.shields.io/coveralls/github/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge&label=">
+                                        </a>
                                     {%- endif -%}
                                 </td>
-                                <td><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge"></td>
+                                <td><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge&label="></td>
                             </tr>
                             {% endfor %}
                             </tbody>
