@@ -68,7 +68,7 @@
                                 </td>
                                 <td>
                                     <a href="https://travis-ci.org/{{ repo.user }}/{{ repo.repo }}">
-                                        <img alt="Travis (.org)" src="https://img.shields.io/travis/{{ repo.user }}/{{ repo.repo }}.svg?style=for-the-badge&label=">
+                                        <img alt="Travis (.org)" src="https://img.shields.io/travis/{{ repo.user }}/{{ repo.repo }}/{{ repo.branch|default('master') }}.svg?style=for-the-badge&label=">
                                     </a>
                                 </td>
                                 <td>
